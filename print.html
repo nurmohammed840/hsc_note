@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>NoteBook</title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./assets/css/mdbook-admonish.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="জীববিজ্ঞান_প্রথম_পত্র/init.html"><strong aria-hidden="true">1.</strong> জীববিজ্ঞান প্রথম পত্র</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="জীববিজ্ঞান_প্রথম_পত্র/কোষ_বিভাজন.html"><strong aria-hidden="true">1.1.</strong> কোষ বিভাজন</a></li></ol></li><li class="chapter-item expanded "><a href="রসায়ন_দ্বিতীয়_পত্র/init.html"><strong aria-hidden="true">2.</strong> রসায়ন দ্বিতীয় পত্র</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="রসায়ন_দ্বিতীয়_পত্র/পরিমানগত_রসায়ন.html"><strong aria-hidden="true">2.1.</strong> পরিমানগত রসায়ন</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">NoteBook</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="জীববিজঞান---1"><a class="header" href="#জীববিজঞান---1">জীববিজ্ঞান - 1</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="কোষ-বিভাজন"><a class="header" href="#কোষ-বিভাজন">কোষ বিভাজন</a></h1>
+<ol>
+<li>
+<p>ক্রসিং ওভার (<a href="https://en.wikipedia.org/wiki/Chromosomal_crossover">Crossing over</a>) বলতে কি বুঝ ?</p>
+<p>ক্রসিং ওভার, হল দুটি হোমোলোগাস ক্রোমোজোমের নন-সিস্টার ক্রোমাটিডের মধ্যে যৌন প্রজননের সময় জেনেটিক উপাদানের আদান-প্রদান.</p>
+</li>
+<li>
+<p>কায়াজমা (<a href="https://en.wikipedia.org/wiki/Chiasma_(genetics)">Chiasma</a>) কি ?</p>
+<p>হোমোলোগাস ক্রোমোজোমের দুটি নন-সিস্টার ক্রোমাটিড এর জোড়াস্থলকে কায়াজমা বলে .</p>
+</li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uTTKi4Pcsf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr />
+<!-- 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DwAFZb8juMQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> --><div style="break-before: page; page-break-before: always;"></div><h1 id="রসায়ন---2"><a class="header" href="#রসায়ন---2">রসায়ন - 2</a></h1>
+<ol>
+<li>
+<p>দর্শক আয়ন (<a href="https://en.wikipedia.org/wiki/Spectator_ion">Spectator ion</a>) কি ?</p>
+<p>উত্তরঃ জলীয় দ্রবণে যে আয়নগুলো ব্রিক্রিয়ায় অংশগ্রহণ করে না .</p>
+</li>
+<li>
+<p>ক্যাটেনেশন (<a href="https://en.wikipedia.org/wiki/Catenation">Catenation</a>) কি ? </p>
+<p>উত্তরঃ কার্বনের অসংখ্য পরমাণু নিজেদের মধ্যে যুক্ত হয়ে ছোট-বড় বিভিন্ন আকার ও আকৃতির দীর্ঘ চিকন বা বলয় গঠন করার ক্ষমতাই কার্বনের ক্যাটেনেশন.</p>
+</li>
+<li>
+<p>e.m.f (<a href="https://en.wikipedia.org/wiki/Electromotive_force">Electromotive force</a>) কি ?</p>
+<p>উত্তরঃ বিদ্যুতের সার্কিট খোলা থাকা অবস্থায় তড়িৎদ্বার দুটির মধ্যে যে বিভব পার্থক্য দেখা যায় তাকে e.m.f বলে </p>
+</li>
+<li>
+<p>ppm (<a href="https://en.wikipedia.org/wiki/Parts-per_notation">Parts-Per-Million</a>) কি ?</p>
+<p>উত্তরঃ ppm হল জলীয় দ্রবণে একক আয়তনের প্রতি রাসায়নিক পদার্থের ভরের পরিমাপ.</p>
+</li>
+<li>
+<p>পরমশূন্য তাপমাত্রা কাকে বলে ?</p>
+<p>উত্তরঃ যে তাপমাত্রায় চার্লস বা গে-লুসাকের সূত্রানুসারে গ্যাসের আয়তন এর বিলুপ্তি ঘটে অর্থাৎ শূন্য হয়ে যায় সে তাপমাত্রাকে পরমশূন্য তাপমাত্রা বলে.</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="পরিমানগত-রসায়ন"><a class="header" href="#পরিমানগত-রসায়ন">পরিমানগত রসায়ন</a></h1>
+<ul>
+<li>ঘনমাত্রা (Concentration)</li>
+<li>আণবিক ভর (Molecular mass)</li>
+</ul>
+<p>\[ C = mol \cdot L^{-1} \]
+\[ ppm = C  \times  M  \times 10^3 \]
+\[ ppb = C  \times  M  \times 10^6 \]</p>
+<h3 id="পরশন-ও-সমাধান"><a class="header" href="#পরশন-ও-সমাধান">প্রশ্ন ও সমাধান</a></h3>
+<p>নিম্নে A ও B উভয় পাত্রে 250 ml দ্রবণ রয়েছে</p>
+<table><thead><tr><th style="text-align: center">A পাত্র</th><th style="text-align: center">B পাত্র</th></tr></thead><tbody>
+<tr><td style="text-align: center">5% \(H_2 SO_4\)</td><td style="text-align: center">1 Decimolar \(NaOH\)</td></tr>
+</tbody></table>
+<div id="admonition-default" class="admonition note">
+<div>
+<p>A পাত্রের ঘনমাত্রা কত হবে?</p>
+</div>
+</div>
+<p>\(H_2 SO_4\) এর আণবিক ভর, \(M = (1 \times 2) + 32 + (4 \times 16) = 98\)</p>
+<p>5% \(H_2 SO_4\) এর ঘনমাত্রা,</p>
+<p>\[C = \frac{5}{100} \times \frac{1000}{M} = \frac{5 \times 10}{98} = 0.51\]</p>
+<div id="admonition-default-1" class="admonition note">
+<div>
+<p>A পাত্রের ঘনমাত্রাকে ppm এককে প্রকাশ কর</p>
+</div>
+</div>
+<p>\[ppm = C  \times  M  \times 10^3 = 0.51 \times 98 \times 10^3  = 5 \times 10^4\]</p>
+<div id="admonition-default-2" class="admonition note">
+<div>
+<p>B পাত্রে কতটুকু পানি অপসারন করলে তা সেমিমোলার দ্রবণ এ পরিনত হবে?</p>
+</div>
+</div>
+<p>যেখানে, \(V_1 = \text{250 mL , } S_1 = \text{0.1 M , } V_2 = \text{? , } S_2 = \text{0.5 M}\)</p>
+<p>লঘুকরণ সূত্রানুসারে,
+\[V_1 S_1 = V_2 S_2\]
+\[\therefore V_2 = \frac{V_1 S_1}{S_2} = \frac{250 \times 0.1}{0.5} = 50 mL\]</p>
+<p>সুতরাং B পাত্রে পানি অপসারন করতে হবে \((250 - 50) = 200 mL\)</p>
+<div id="admonition-default-3" class="admonition note">
+<div>
+<p>A + B পাত্রের দ্রবণ একত্রে মিশ্রিত করলে দ্রবণের প্রকৃতি কিরূপ হবে?</p>
+</div>
+</div>
+<p>\[\text{250 mL 0.51 M } H_2 SO_4 \equiv (250 \times 0.51) \text{ mL 1 M } H_2 SO_4\]
+\[= 127.5 \text{ mL 1 M } H_2 SO_4\]</p>
+<p>\[\text{250 mL 0.1 M } NaOH \equiv (250 \times 0.1) \text{ mL 1 M } NaOH\]
+\[= 25 \text{ mL 1 M } NaOH\]</p>
+<p>সংশ্লিষ্ট বিক্রিয়াটি নিম্নরূপঃ </p>
+<p>\[H_2 SO_4 + 2NaOH \rightarrow Na_2 SO_4 + H_2 O\]</p>
+<p>বিক্রিয়া থেকে,</p>
+<p>\[2 \text{ mol } NaOH \equiv 1 \text{ mol } H_2 SO_4\]
+\[\therefore 1 \text{ mol } NaOH \equiv \frac{1}{2} \text{ mol } H_2 SO_4\]</p>
+<p>সুতরাং,</p>
+<p>\[25 \text{ mL 1 M } NaOH \equiv (\frac{1}{2} \times 25) \text{ mL 1 M } H_2 SO_4\]
+\[= \text{12.5 mL 1 M } H_2 SO_4 \]</p>
+<p>মিশ্রণে অতিরিক্ত \(H_2 SO_4\) এর পরিমাণ \( (127.5 - 12.5) = \text{115 mL 1 M}\), সেহেতু মিশ্রণে  দ্রবণের প্রকৃতি অম্লীয় হবে</p>
+<div id="admonition-default-4" class="admonition note">
+<div>
+<p>A + B মিশ্রণে pH কত হবে?</p>
+</div>
+</div>
+<p>\(A + B \) মিশ্রণে অতিরিক্ত \(H_2 SO_4\) এর পরিমাণ \(\text{115 mL 1 M}\) </p>
+<p>মিশ্রণে \(H^+\) অয়নের ঘনমাত্রা \([H^+] = \frac{115}{250 + 250} = 0.23 M\)
+\[\therefore H_2 SO_4 \text{ এ } [H^+] = 0.23 M \times 2 = 0.46 M\]
+\[\therefore pH = - \log{[H^+]} = - \log{(0.46)} = 0.337\]</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+    </body>
+</html>
